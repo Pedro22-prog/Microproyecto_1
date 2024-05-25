@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;&display=swap");
+
+body{
+    display: flex;
+    align-items: center;
+    background-color: #f4c531;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    width: 850px;
+    background: #fff;
+    display: flex;
+    padding: 60px 40px;
+    border-radius: 15px;
+    align-items: flex-end;
+    gap: 65px;
+}
+.hangman-box{
+    max-width: 260px;
+
+}
+.hangman-box h1{
+    font-size: 1.45 rem;
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.word-display{
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.word-display .letter{
+    width: 30px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #000;
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+}
+
+.word-display .letter.guessed{
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+
+.game-box h4{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
