@@ -90,12 +90,10 @@ body{
     text-transform: uppercase;
     
 }
-
 .word-display .letter.guessed{
     border-color: transparent;
     margin: -40px 0 35px;
 }
-
 .game-box h4{
     text-align: center;
     font-size: 1.1rem;
