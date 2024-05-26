@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
 @media (max-width: 768px) {
     .container {
@@ -40,13 +40,13 @@
         font-size: 1.8rem;
     }
 
-    .hint-text, .guesses-text {
+    .hint-text,
+    .guesses-text {
         font-size: 0.9rem;
     }
 }
 
-
-body{
+body {
     display: flex;
     align-items: center;
     background-color: #f4c531;
@@ -55,7 +55,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-.container{
+.container {
     width: 850px;
     background: #fff;
     display: flex;
@@ -64,37 +64,41 @@ body{
     align-items: flex-end;
     gap: 65px;
 }
-.hangman-box{
-    max-width: 260px;
 
+.hangman-box {
+    max-width: 260px;
 }
-.hangman-box h1{
-    font-size: 1.45 rem;
+
+.hangman-box h1 {
+    font-size: 1.45rem;
     margin-top: 25px;
     text-align: center;
     text-transform: uppercase;
 }
-.word-display{
+
+.word-display {
     display: flex;
     gap: 15px;
     list-style-type: none;
     align-items: center;
     justify-content: center;
 }
-.word-display .letter{
+
+.word-display .letter {
     width: 30px;
     margin-bottom: 30px;
     border-bottom: 4px solid #000;
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
-    
 }
-.word-display .letter.guessed{
+
+.word-display .letter.guessed {
     border-color: transparent;
     margin: -40px 0 35px;
 }
-.game-box h4{
+
+.game-box h4 {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 500;
