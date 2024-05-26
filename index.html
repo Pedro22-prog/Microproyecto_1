@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorcado</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="script/main.js" defer></script>
-    <script src="script/ahorcado-data.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
+    <div class="hangman-modal">
+        <div class="content">
+            <img src="" alt="Victory/Lost" class="modal-image">
+            <h4 class="modal-title"></h4>
+            <p class="modal-text"></p>
+            <button class="play-again">Jugar de Nuevo</button>
+        </div>
+    </div>
     <div class="container">
         <div class="hangman-box">
             <img src="imagenes/hangman-0.svg" draggable="false" alt="Horca" class="hangman-image">
@@ -22,7 +29,7 @@
                 <p>Victorias: <b class="number-wins">0</b></p>
             </div>
             <div class="hangman-rights">
-                <p>Juegos: <b class="rights">0</b></p>
+                <p>Aciertos: <b class="rights">0</b></p>
             </div>
             <div class="hangman-loses">
                 <p>Perdidas: <b class="number-loses">0</b></p>
@@ -30,22 +37,15 @@
             <div class="hangman-wrong">
                 <p>Erradas: <b class="wrongs">0</b></p>
             </div>
-            <button class="delete-record" onclick="confirmClearLocalStorage()">Borrar Record</button>
+            <button class="delete-record" onclick="confirmClear()">Borrar Record</button>
         </div>
         <div class="game-box">
-            <ul class="word-display">
-                <li class="letter"></li>
-                <li class="letter"></li>
-                <li class="letter guessed">a</li>
-                <li class="letter"></li>
-                <li class="letter"></li>
-                <li class="letter"></li>
-            </ul>
+            <ul class="word-display"></ul>
             <h4 class="hint-text">
-                Pista:<b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis pariatur et voluptate ipsum ratione mollitia cumque doloribus dolores vitae aliquam. Tempora, temporibus beatae quis quae nemo blanditiis possimus assumenda quo!</b>
+                Pista: <b></b>
             </h4>
             <h4 class="guesses-text">
-                Intentos fallidos:<b><span> 0</span></b>
+                Intentos fallidos: <b><span>0</span>/<span>6</span></b>
             </h4>
             <div class="keyboard"></div>
         </div>

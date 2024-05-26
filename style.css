@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;&display=swap");
-
 @media (max-width: 768px) {
     .container {
         width: 90%;
         flex-direction: column;
         align-items: center;
+        padding: 30px 20px;
     }
 
     .hangman-box {
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 100%;
     }
 
     .hangman-image {
@@ -19,17 +19,19 @@
 
     .hangman-title {
         font-size: 1.8rem;
+        margin-top: 15px;
     }
 
     .hangman-stats {
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
     }
 
     .hangman-stats > div {
         width: 45%;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 
     .game-box {
@@ -38,15 +40,26 @@
 
     .word-display .letter {
         font-size: 1.8rem;
+        width: 25px;
+        margin-bottom: 20px;
     }
 
-    .hint-text, .guesses-text {
+    .word-display .letter.guessed {
+        margin: -30px 0 25px;
+    }
+
+    .hint-text,
+    .guesses-text {
         font-size: 0.9rem;
+    }
+
+    .keyboard button {
+        padding: 8px 12px;
+        font-size: 14px;
     }
 }
 
-
-body{
+body {
     display: flex;
     align-items: center;
     background-color: #f4c531;
@@ -55,7 +68,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-.container{
+.container {
     width: 850px;
     background: #fff;
     display: flex;
@@ -64,39 +77,59 @@ body{
     align-items: flex-end;
     gap: 65px;
 }
-.hangman-box{
-    max-width: 260px;
 
+.hangman-box {
+    max-width: 260px;
 }
-.hangman-box h1{
-    font-size: 1.45 rem;
+
+.hangman-box h1 {
+    font-size: 1.45rem;
     margin-top: 25px;
     text-align: center;
     text-transform: uppercase;
 }
-.word-display{
+
+.word-display {
     display: flex;
     gap: 15px;
     list-style-type: none;
     align-items: center;
     justify-content: center;
 }
-.word-display .letter{
+
+.word-display .letter {
     width: 30px;
     margin-bottom: 30px;
     border-bottom: 4px solid #000;
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
-    
 }
-.word-display .letter.guessed{
+
+.word-display .letter.guessed {
     border-color: transparent;
     margin: -40px 0 35px;
 }
-.game-box h4{
+
+.game-box h4 {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 15px;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.keyboard button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
 }
