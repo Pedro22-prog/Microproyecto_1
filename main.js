@@ -6,14 +6,12 @@ let gameStats = {
     loses: 0,
     wrongs: 0
 };
-
 // Carga los datos del almacenamiento interno
 const savedInfo = localStorage.getItem("hangmanStats");
 if (savedInfo) {
     gameStats = JSON.parse(savedInfo);
     updateStats();
 }
-
 // Actualiza las estadisticas locales
 function updateStats() {
     document.querySelector(".number-of-games").innerText = gameStats.gamesPlayed;
@@ -22,20 +20,17 @@ function updateStats() {
     document.querySelector(".number-loses").innerText = gameStats.loses;
     document.querySelector(".wrongs").innerText = gameStats.wrongs;
 }
-
 // Salva el historial local
 function updateStatsLocal() {
     updateStats();
     localStorage.setItem("hangmanStats", JSON.stringify(gameStats));
 }
-
 // Limpia el historial y reinicia el juego
 function clearLocal() {
     localStorage.removeItem("hangmanStats");
     alert("Se ha borrado tú historial de juego");
     location.reload();
 }
-
 // Elementos necesarios para que corra el juego
 const wordDisplay = document.querySelector('.word-display');
 const hintText = document.querySelector('.hint-text b');
@@ -46,10 +41,8 @@ const modalImage = document.querySelector('.modal-image');
 const modalTitle = document.querySelector('.modal-title');
 const modalText = document.querySelector('.modal-text');
 const playAgainBtn = document.querySelector('.play-again');
-
 // Variables del juego
 let word, hint, wrongGuesses, rightGuesses, gameOver, gameWon;
-
 // Function to start a new game
 function startGame() {
     // Reinicia las variables del juego
@@ -83,7 +76,6 @@ function startGame() {
     // reinicia la imagen del ahorcado
     hangmanImage.src = 'imagenes/hangman-0.svg';
 }
-
 // Función que maneja las adivinanzas por las letras
 function handleGuess(event) {
     if (!gameOver && !gameWon) {
