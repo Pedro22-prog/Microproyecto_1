@@ -1,12 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;&display=swap");
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hangman-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hangman-image {
+        max-width: 80%;
+    }
+
+    .hangman-title {
+        font-size: 1.8rem;
+    }
+
+    .hangman-stats {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hangman-stats > div {
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+
+    .game-box {
+        width: 100%;
+    }
+
+    .word-display .letter {
+        font-size: 1.8rem;
+    }
+
+    .hint-text, .guesses-text {
+        font-size: 0.9rem;
+    }
+}
+
+
 body{
     display: flex;
     align-items: center;
     background-color: #f4c531;
     justify-content: center;
     min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
 }
+
 .container{
     width: 850px;
     background: #fff;
